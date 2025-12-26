@@ -164,11 +164,11 @@
             <p class="metrics-subtitle">Building momentum through strategic development</p>
             <div class="counters">
                 <div class="counter">
-                    <span class="count" data-target="42">0</span>
+                    <span class="count" data-target="24">0</span>
                     <p>Strategic Engagements</p>
                 </div>
                 <div class="counter">
-                    <span class="count" data-target="9">0</span>
+                    <span class="count" data-target="8">0</span>
                     <p>Development Tracks</p>
                 </div>
                 <div class="counter">
@@ -213,28 +213,29 @@
             }
         });
         
-        // Countup Animation
+// Countup Animation - IMPROVED VERSION
         document.addEventListener('DOMContentLoaded', function() {
             const counters = document.querySelectorAll('.count');
-            const speed = 30;
             
             const startCounters = () => {
                 counters.forEach(counter => {
-                    const updateCount = () => {
-                        const target = +counter.getAttribute('data-target');
-                        const count = +counter.innerText;
-                        
-                        const inc = target / speed;
-                        
-                        if (count < target) {
-                            counter.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 40);
+                    const target = +counter.getAttribute('data-target');
+                    const start = +counter.innerText;
+                    const duration = 2000; // 2 secondi TOTALI per ogni animazione
+                    const increment = target / (duration / 50); // Calcola incremento per frame
+                    let current = start;
+                    
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.floor(current);
+                            requestAnimationFrame(updateCounter);
                         } else {
                             counter.innerText = target;
                         }
                     };
                     
-                    updateCount();
+                    updateCounter();
                 });
             };
             
@@ -246,7 +247,7 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.5 });
+            }, { threshold: 0.3 });
             
             if (metricsSection) {
                 observer.observe(metricsSection);
