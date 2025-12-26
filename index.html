@@ -213,52 +213,7 @@
             }
         });
         
-// Countup Animation - PROFESSIONAL VERSION
-        document.addEventListener('DOMContentLoaded', function() {
-            const counters = document.querySelectorAll('.count[data-target]'); // SOLO quelli con data-target
-            
-            const startCounters = () => {
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    const start = +counter.innerText;
-                    const duration = 2000; // 2 secondi
-                    const startTime = performance.now();
-                    
-                    const updateCounter = (currentTime) => {
-                        const elapsed = currentTime - startTime;
-                        const progress = Math.min(elapsed / duration, 1);
-                        
-                        // Smooth easing
-                        const easeOut = 1 - Math.pow(1 - progress, 3);
-                        const current = start + (target - start) * easeOut;
-                        
-                        counter.innerText = Math.floor(current);
-                        
-                        if (progress < 1) {
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    
-                    requestAnimationFrame(updateCounter);
-                });
-            };
-            
-            const metricsSection = document.querySelector('.metrics');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        startCounters();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3 });
-            
-            if (metricsSection) {
-                observer.observe(metricsSection);
-            }
-        });
+
     </script>
 </body>
 </html>
