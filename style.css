@@ -433,3 +433,155 @@ footer {
         min-width: 100%;
     }
 }
+/* Updates & Newsletter */
+.updates {
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.updates h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #88ddff;
+}
+
+.updates-subtitle {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #bbccff;
+    font-size: 1.1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 30px auto;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,150,255,0.4);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0,255,136,0.3);
+}
+
+.newsletter-btn {
+    padding: 18px 30px;
+    background: linear-gradient(90deg, #0088ff, #00aaff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: not-allowed;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.small-note {
+    font-size: 0.85rem;
+    color: #8899cc;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Advisory Board */
+.advisory {
+    padding: 70px 0;
+}
+
+.advisory h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #88ddff;
+    text-align: center;
+}
+
+.advisory-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #bbccff;
+    font-size: 1.1rem;
+}
+
+.advisors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.advisor-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background: rgba(20, 30, 60, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(0, 150, 255, 0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.advisor-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff88;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.advisor-icon {
+    font-size: 2.5rem;
+    color: #00ccff;
+    margin-bottom: 20px;
+}
+
+.advisor-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.advisor-role {
+    color: #88ddff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.advisor-bio {
+    color: #aaccff;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.advisory-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #6677aa;
+    font-style: italic;
+    max-width: 600px;
+    margin: 30px auto 0;
+}
